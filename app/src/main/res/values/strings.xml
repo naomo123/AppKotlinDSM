@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppKotlinDSM</string>
+    <string name="op_1">Promedio de estudiante</string>
+    <string name="op_2">Salario neto empleado</string>
+    <string name="menu">Inicio</string>
+
+
+    <string name="employee_name">Nombre del empleado</string>
+    <string name="base_salary">Salario base</string>
+    <string name="net_salary">Salario neto</string>
+    <string name="calculate">Calcular</string>
+</resources>
