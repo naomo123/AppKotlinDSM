@@ -6,14 +6,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appkotlindsm.modelo.Employee
+import java.text.DecimalFormat
 
 
 class Adapter_employee(private val employees: MutableList<Employee>) :
     RecyclerView.Adapter<Adapter_employee.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTextView: TextView = itemView.findViewById(R.id.item_Name)
-        val salaryTextView: TextView = itemView.findViewById(R.id.item_salaryb)
+        val tvNombre: TextView = itemView.findViewById(R.id.item_Name)
+        val tvSalBase: TextView = itemView.findViewById(R.id.item_salaryb)
+        val tvSalNeto: TextView = itemView.findViewById(R.id.item_salaryn)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,8 +26,15 @@ class Adapter_employee(private val employees: MutableList<Employee>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val employee = employees[position]
-        holder.nameTextView.text = employee.nombre
-        holder.salaryTextView.text = employee.salario.toString()
+
+        holder.tvNombre.text = "Nombre: " + employee.nombre
+        holder.tvSalBase.text = "Salario base: $" + employee.salario
+
+        val resultado= (employee.salario.toDouble())-(employee.salario.toDouble()*0.03)-(employee.salario.toDouble()*0.04)-(employee.salario.toDouble()*0.05)
+        val formatoDecimal = DecimalFormat("0.00")
+        val resultadoRedondeado = formatoDecimal.format(resultado)
+
+        holder.tvSalNeto.text = "Salario neto: $" + resultadoRedondeado
     }
 
     override fun getItemCount(): Int {
