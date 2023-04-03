@@ -12,7 +12,7 @@ import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity() {
     private var loginBtn: Button? = null
-    private var singupBtn: Button? = null
+    private var signupBtn: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        singupBtn!!.setOnClickListener{
+        signupBtn!!.setOnClickListener{
             Toast.makeText(this, "Login screen", Toast.LENGTH_LONG).show()
             val intent=Intent(this,RegistrationActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun initializeUI() {
         loginBtn = findViewById<Button>(R.id.login)
-        singupBtn = findViewById<Button>(R.id.singup)
+        signupBtn = findViewById<Button>(R.id.signup)
     }
     /** Menu creation and actions */
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

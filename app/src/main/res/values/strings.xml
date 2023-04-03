@@ -4,9 +4,15 @@
     <string name="op_2">Salario neto empleado</string>
     <string name="menu">Inicio</string>
 
+        <string name="email">   Email</string>
 
-    <string name="employee_name">Nombre del empleado</string>
-    <string name="base_salary">Salario base</string>
+    <string name="title_employee">Empleados</string>
+    <string name="employee_name">   Nombre del empleado</string>
+    <string name="base_salary">   Salario base</string>
     <string name="net_salary">Salario neto</string>
     <string name="calculate">Calcular</string>
+
+    <string name="btn_Signup">Sign Up</string>
+    <string name="btn_Login">Log in</string>
+
 </resources>

@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth
 class RegistrationActivity : AppCompatActivity() {
     private var emailTV: EditText? = null
     private var passwordTV: EditText? = null
-    private var singup: Button? = null
+    private var signup: Button? = null
     private var progressBar: ProgressBar? = null
     private var mAuth: FirebaseAuth? = null
 
@@ -32,7 +32,7 @@ class RegistrationActivity : AppCompatActivity() {
 
         mAuth= FirebaseAuth.getInstance()
         initializeUI()
-        singup!!.setOnClickListener { registerNewUser() }
+        signup!!.setOnClickListener { registerNewUser() }
     }
     private fun registerNewUser(){
         progressBar!!.visibility= View.VISIBLE
@@ -74,7 +74,7 @@ class RegistrationActivity : AppCompatActivity() {
     private fun initializeUI() {
         emailTV = findViewById(R.id.email)
         passwordTV = findViewById(R.id.password)
-        singup = findViewById(R.id.register)
+        signup = findViewById(R.id.signup)
         progressBar = findViewById(R.id.progressBar)
     }
     /** Menu creation and actions */
