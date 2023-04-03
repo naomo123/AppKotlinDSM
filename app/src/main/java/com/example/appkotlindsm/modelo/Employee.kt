@@ -1,22 +1,21 @@
 package com.example.appkotlindsm.modelo
+import com.google.firebase.database.DataSnapshot
 
-import com.google.firebase.firestore.DocumentSnapshot
-
-class Employee(
+data class Employee(
+    var id: String = "",
     var nombre: String = "",
-    var salario: Double = 0.0
+    var salario: Double = 0.0,
+    var documentId: String? = null
 ) {
     companion object {
-        const val COLLECTION_NAME = "empleados"
-
-        fun fromSnapshot(snapshot: DocumentSnapshot): Employee {
-            val empleado = snapshot.toObject(Employee::class.java)!!
-            empleado.documentId = snapshot.id
+        const val CHILD_NAME = "empleados"
+        fun fromSnapshot(snapshot: DataSnapshot): Employee {
+            val empleado = snapshot.getValue(Employee::class.java)!!
+            empleado.id = snapshot.key ?: ""
+            empleado.documentId = snapshot.key ?: ""
             return empleado
         }
     }
-
-    var documentId: String? = null
 
     fun toMap(): Map<String, Any?> {
         return mapOf(

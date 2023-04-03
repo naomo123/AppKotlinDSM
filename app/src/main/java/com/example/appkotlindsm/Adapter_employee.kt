@@ -3,16 +3,18 @@ package com.example.appkotlindsm
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appkotlindsm.modelo.Employee
 import java.text.DecimalFormat
 
 
-class Adapter_employee(private val employees: MutableList<Employee>) :
+class Adapter_employee(private val employees: MutableList<Employee>, private val onItemClickListener: (Employee) -> Unit) :
     RecyclerView.Adapter<Adapter_employee.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val llEmployeeInfo: LinearLayout = itemView.findViewById(R.id.llemployee)
         val tvNombre: TextView = itemView.findViewById(R.id.item_Name)
         val tvSalBase: TextView = itemView.findViewById(R.id.item_salaryb)
         val tvSalNeto: TextView = itemView.findViewById(R.id.item_salaryn)
@@ -35,6 +37,11 @@ class Adapter_employee(private val employees: MutableList<Employee>) :
         val resultadoRedondeado = formatoDecimal.format(resultado)
 
         holder.tvSalNeto.text = "Salario neto: $" + resultadoRedondeado
+
+        holder.llEmployeeInfo.setOnClickListener {
+            onItemClickListener(employee)
+        }
+
     }
 
     override fun getItemCount(): Int {
