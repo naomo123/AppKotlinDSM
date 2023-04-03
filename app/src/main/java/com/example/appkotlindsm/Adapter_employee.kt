@@ -1,5 +1,7 @@
 package com.example.appkotlindsm
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +30,7 @@ class Adapter_employee(private val employees: MutableList<Employee>, private val
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val employee = employees[position]
+        Log.d(TAG,employee.toString())
 
         holder.tvNombre.text = "Nombre: " + employee.nombre
         holder.tvSalBase.text = "Salario base: $" + employee.salario
@@ -45,6 +48,9 @@ class Adapter_employee(private val employees: MutableList<Employee>, private val
     }
 
     override fun getItemCount(): Int {
+
+        Log.d(TAG,employees.size.toString())
         return employees.size
+
     }
 }

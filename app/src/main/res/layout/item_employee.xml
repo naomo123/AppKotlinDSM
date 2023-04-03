@@ -10,13 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="5dp"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="5dp">
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/llemployee"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/bkg_btn_home"
             android:orientation="vertical">
 
             <TextView
@@ -43,14 +47,6 @@
                 android:gravity="center"
                 android:padding="5dp" />
 
-
-            <Button
-                android:id="@+id/btnBorrar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Borrar"
-                android:layout_gravity="center"
-                android:padding="5dp"/>
 
         </LinearLayout>
 
