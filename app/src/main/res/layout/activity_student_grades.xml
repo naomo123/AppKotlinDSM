@@ -6,4 +6,140 @@
     android:layout_height="match_parent"
     tools:context=".StudentGradesActivity">
 
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="398dp"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/title_student"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+
+                />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_bg"
+                android:fontFamily="sans-serif"
+                android:hint="@string/student_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#4B4A50"
+                app:layout_constraintHorizontal_bias=".5"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_grade1"
+                    android:layout_width="120dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/student_grade1"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#4B4A50"
+                    app:layout_constraintHorizontal_bias=".5"
+                    app:layout_constraintWidth_percent="0.8" />
+
+                <EditText
+                    android:id="@+id/et_grade2"
+                    android:layout_width="120dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/student_grade2"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#4B4A50"
+                    app:layout_constraintHorizontal_bias=".5"
+                    app:layout_constraintWidth_percent="0.8" />
+
+                <EditText
+                    android:id="@+id/et_grade3"
+                    android:layout_width="120dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/student_grade3"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#4B4A50"
+                    app:layout_constraintHorizontal_bias=".5"
+                    app:layout_constraintWidth_percent="0.8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@drawable/ic_plus"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/edit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@drawable/ic_edit"
+                    tools:ignore="VectorDrawableCompat" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVGrades"
+        android:layout_width="420dp"
+        android:layout_height="379dp"
+
+        android:layout_marginTop="12dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="-5dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

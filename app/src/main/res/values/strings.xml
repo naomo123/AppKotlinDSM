@@ -12,6 +12,14 @@
     <string name="net_salary">Salario neto</string>
     <string name="calculate">Calcular</string>
 
+
+    <string name="title_student">Estudiantes</string>
+    <string name="student_name">Nombre del estudiante</string>
+    <string name="student_grade1">Nota 1</string>
+    <string name="student_grade2">Nota 2</string>
+    <string name="student_grade3">Nota 3</string>
+    <string name="student_average">Promedio</string>
+
     <string name="btn_Signup">Sign Up</string>
     <string name="btn_Login">Log in</string>
 
