@@ -77,8 +77,7 @@
                     android:layout_height="wrap_content"
                     android:text="Eliminar"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/design_default_color_error"
-                    android:padding="5dp"/>
+                    android:padding="5dp" />
 
                 <Button
                     android:id="@+id/btn_edit"
@@ -86,8 +85,12 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="5dp"
-                    android:backgroundTint="@color/material_dynamic_neutral_variant50"
-                    android:text="Editar" />
+                    android:layout_margin="5dp"
+                    android:text="Editar"
+
+
+
+                    />
             </LinearLayout>
 
         </LinearLayout>
